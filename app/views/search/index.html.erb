@@ -1,0 +1,11 @@
+<h1>10 Closest Stations within 6 Miles of Zip Code <%= @zip %></h1>
+
+<% @stations.each_with_index do |station, i| %>
+<div class="<%= "station_#{i}" %>">
+  Station: <%= station[:station_name] %><br>
+  Address: <%= "#{station[:street_address]}, #{station[:city]}, #{station[:state]} #{station[:zip]}" %><br>
+  Fuel Type: <%= "Electric" if station[:fuel_type_code] == "ELEC" %><br>
+  Distance: <%= station[:distance].round(3) %> miles<br>
+  Access Times: <%= station[:access_days_time] %><br>
+</div>
+<% end %>
