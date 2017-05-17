@@ -7,10 +7,10 @@ feature 'User sees electric & propane stations within 6 miles of zip code' do
     click_on "Locate"
     
     expect(current_path).to eq search_path # Then I should be on page "/search" with parameters visible in the url
-    within('station_1') {expect(page).to have_content "Name: UDR"}
-    within('station_1') {expect(page).to have_content "Address: 800 Acoma St, Denver, CO 80204"}
-    within('station_1') {expect(page).to have_content "Fuel Type: Electric"}
-    within('station_1') {expect(page).to have_content "Distance: 0.314 miles"}
-    within('station_1') {expect(page).to have_content "Access Times: 24 hours daily"}
+    within('div.station_0') {expect(page).to have_content "Station: UDR"}
+    within('div.station_0') {expect(page).to have_content "Address: 800 Acoma St, Denver, CO 80204"}
+    within('div.station_0') {expect(page).to have_content "Fuel Type: Electric"}
+    within('div.station_0') {expect(page).to have_content "Distance: 0.314 miles"}
+    within('div.station_0') {expect(page).to have_content "Access Times: 24 hours daily"}
   end
 end
