@@ -1,9 +1,8 @@
 class SearchController < ApplicationController
   
   def index
-    @zip = params['q']
-    
-    @stations = (JSON.parse(response.body, symbolize_names: true))[:fuel_stations]
+    zip = params['q']
+    @stations = NRELService.new(zip).find_stations_based_on_zip
   end
   
 end
