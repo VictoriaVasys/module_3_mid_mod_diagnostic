@@ -1,0 +1,8 @@
+<h1>10 Closest Stations within 6 Miles of Zip Code <%= @zip %></h1>
+
+<% @stations.each do |station| %>
+Station:
+Address: 
+Fuel Type: 
+Distance: 
+Access Times: <%= station[:access_days_time] %>
