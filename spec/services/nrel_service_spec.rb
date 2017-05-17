@@ -1,6 +1,6 @@
 describe NRELService do
   
-  scenario "finds stations" do
+  xscenario "finds stations" do
     VCR.use_cassette("nrel_stations_based_on_zip") do
       stations = NRELService.new(80203).find_stations_based_on_zip
       

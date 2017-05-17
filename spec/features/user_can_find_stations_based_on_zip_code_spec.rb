@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User sees electric & propane stations within 6 miles of zip code' do
-  scenario 'User is navigated to correct page and sees station information' do
+  xscenario 'User is navigated to correct page and sees station information' do
     visit root_path
     fill_in "search-box", with: "80203"
     click_on "Locate"
